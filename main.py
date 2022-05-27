@@ -1,5 +1,7 @@
 import pygame
-
+import sys
+import os
+import platform
 pygame.init()
 player_cards = []
 ai1_cards = []
@@ -66,7 +68,20 @@ minus_rect.center = (100000, 100000)
 volume_int_rect.center = (100000, 100000)
 options_back_rect.center = (100000, 100000)
 
+def install():
+  os1 = platform.system()
+  #these if statements check to see what os is running since shell command syntax is dependent on OS 
+  if pygame in sys.modules()
+    print("pynput is already installed on your computer"
+  elif os1 == "Linux": 
+    os.system('cmd /k "-r requirements.txt"')
+  elif os1 == "Windows":
+    os.system('cmd /k "Your Command Prompt Command"')
 
+  elif os1 == "MacOS":
+    os.system('cmd /k "-r requirements.txt"')
+
+  
 def load_title():
     options_rect.center = (500, 300)
     start_rect.center = (500, 250)
